@@ -8,7 +8,7 @@ Welcome to the Quest Game web application! This is a simple web-based text adven
 
 Before you get started, make sure you have the following prerequisites:
 
-- Java Development Kit (JDK) 11 or higher
+- Java Development Kit (JDK) 18
 - Apache Maven
 - Apache Tomcat 10.1.12
 - A compatible web browser
