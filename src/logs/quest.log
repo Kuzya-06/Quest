@@ -1,0 +1,25 @@
+2023-10-02 01:16:20,654 INFO  LoginServlet doPost: method doPost LoginServlet - begin.
+2023-10-02 01:16:20,668 INFO  LoginServlet doPost: method doPost LoginServlet -> User(login=admin, password=admin)
+2023-10-02 01:16:20,669 INFO  LoginServlet doPost: method doPost LoginServlet - неверный пароль.
+2023-10-02 01:16:20,669 INFO  LoginServlet doPost: method doPost LoginServlet - end.
+2023-10-02 01:18:59,185 INFO  ServletQuest doGet: method doGet ServletQuest - begin.
+2023-10-02 01:18:59,186 INFO  ServletQuest doGet: method doGet ServletQuest - end.
+2023-10-02 01:19:46,238 INFO  SignupServlet doPost: method doPost SignupServlet - begin
+2023-10-02 01:19:46,239 INFO  SignupServlet doPost: method doPost SignupServlet - yes isEmty
+2023-10-02 01:19:46,244 INFO  SignupServlet doPost: method doPost SignupServlet - end
+2023-10-02 01:20:08,936 INFO  LoginServlet doPost: method doPost LoginServlet - begin.
+2023-10-02 01:20:08,937 INFO  LoginServlet doPost: method doPost LoginServlet -> User(login=tom, password=123)
+2023-10-02 01:20:08,937 INFO  LoginServlet doPost: method doPost LoginServlet - неверный пароль.
+2023-10-02 01:20:08,937 INFO  LoginServlet doPost: method doPost LoginServlet - end.
+2023-10-02 01:20:30,945 INFO  ServletQuest doGet: method doGet ServletQuest - begin.
+2023-10-02 01:20:30,946 INFO  ServletQuest doGet: method doGet ServletQuest - end.
+2023-10-02 01:21:22,858 INFO  SignupServlet doPost: method doPost SignupServlet - begin
+2023-10-02 01:21:22,859 INFO  SignupServlet doPost: method doPost SignupServlet - no isEmty
+2023-10-02 01:21:22,864 INFO  SignupServlet doPost: method doPost SignupServlet - end
+2023-10-02 01:21:52,496 INFO  SignupServlet doPost: method doPost SignupServlet - begin
+2023-10-02 01:21:52,497 INFO  SignupServlet doPost: method doPost SignupServlet - !password1.equals(password2)
+2023-10-02 01:21:52,504 INFO  SignupServlet doPost: method doPost SignupServlet - yes isEmty
+2023-10-02 01:21:52,504 INFO  SignupServlet doPost: method doPost SignupServlet - end
+2023-10-02 01:22:11,995 INFO  SignupServlet doPost: method doPost SignupServlet - begin
+2023-10-02 01:22:11,996 INFO  SignupServlet doPost: method doPost SignupServlet - no isEmty
+2023-10-02 01:22:12,001 INFO  SignupServlet doPost: method doPost SignupServlet - end
