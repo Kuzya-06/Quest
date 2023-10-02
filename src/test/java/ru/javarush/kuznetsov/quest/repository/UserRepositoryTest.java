@@ -1,8 +1,11 @@
 package ru.javarush.kuznetsov.quest.repository;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import ru.javarush.kuznetsov.quest.entity.User;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -12,6 +15,22 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UserRepositoryTest {
     UserRepository userRepository = UserRepository.get();
+
+    @ParameterizedTest
+    @ValueSource(longs = {0l})
+    void getById0DefaultTest(long id){
+        Map<Long, User> all = userRepository.getAll();
+        User user = all.get(id);
+        assertEquals("admin", user.getLogin());
+    }
+
+    @ParameterizedTest
+    @ValueSource(longs = {1l})
+    void getById1DefaultTest(long id){
+        Map<Long, User> all = userRepository.getAll();
+        User user = all.get(id);
+        assertEquals("user", user.getLogin());
+    }
 
     @Test
     void createUserTest() {
@@ -32,7 +51,29 @@ class UserRepositoryTest {
 
         Optional<User> user = userRepository.findUser("root", "root123");
         User user1 = user.get();
-        assertEquals(userRepository.getById(count-1).get(), user1);
+        assertEquals(userRepository.getById(count - 1).get(), user1);
+
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"admin", "user"})
+    void verifyLoginByLoginDefaultTest(String login) {
+        Collection<User> values = userRepository.getAll().values();
+        boolean b = values.stream()
+                .map(e -> e.getLogin())
+                .anyMatch(e -> e.equals(login));
+        assertTrue(b);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"admin", "user", "qwertyuiop"})
+    void verifyLoginByLoginAddLoginTest(String login) {
+        Collection<User> values = userRepository.getAll().values();
+        userRepository.createUser(login, "111");
+        boolean b = values.stream()
+                .map(e -> e.getLogin())
+                .anyMatch(e -> e.equals(login));
+        assertTrue(b);
 
     }
 }
